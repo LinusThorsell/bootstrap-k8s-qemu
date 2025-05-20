@@ -37,7 +37,7 @@ qemu-system-x86_64 \
   -m "$MEMORY" \
   -cdrom "$DISK_ISO" \
   -boot d \
-  -hda "$DISK_IMAGE" \
+  -drive file="$DISK_IMAGE",format=qcow2,if=virtio \
   -net nic -net user \
   -nographic
 
